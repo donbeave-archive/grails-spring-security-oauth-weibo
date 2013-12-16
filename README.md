@@ -1,4 +1,4 @@
-grails-spring-security-oauth-weibo
+grails-spring-security-oauth-weibo [![Build Status](https://api.travis-ci.org/donbeave/grails-spring-security-oauth-weibo.png?branch=master)](https://travis-ci.org/donbeave/grails-spring-security-oauth-weibo)
 ==================================
 
 Weibo extension for [Grails Spring Security OAuth][spring-security-oauth-plugin] plugin
