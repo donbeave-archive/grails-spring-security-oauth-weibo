@@ -39,6 +39,10 @@ class WeiboOAuthToken extends OAuthToken {
     return uid
   }
 
+  String getScreenName() {
+    return uid
+  }
+
   String getProviderName() {
     return PROVIDER_NAME
   }
