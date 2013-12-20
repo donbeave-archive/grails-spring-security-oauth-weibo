@@ -22,9 +22,9 @@ import grails.converters.JSON
  */
 class WeiboSpringSecurityOAuthService {
 
-	def createAuthToken(accessToken) {
-		def tokenJson = JSON.parse(accessToken.rawResponse)
-		return new WeiboOAuthToken(accessToken, tokenJson.uid)
-	}
+  def createAuthToken(accessToken) {
+    def tokenJson = JSON.parse(accessToken.rawResponse)
+    return new WeiboOAuthToken(accessToken, tokenJson.uid)
+  }
 
 }
