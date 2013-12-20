@@ -2,7 +2,7 @@
  * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
  */
 class SpringSecurityOauthWeiboGrailsPlugin {
-  def version = '0.1'
+  def version = '0.1.1'
   def grailsVersion = '1.2.2 > *'
   def dependsOn = [springSecurityOauth: '2.0.2 > *']
   def pluginExcludes = [
