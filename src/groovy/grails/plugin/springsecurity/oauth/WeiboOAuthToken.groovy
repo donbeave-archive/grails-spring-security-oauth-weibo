@@ -25,7 +25,7 @@ import org.scribe.model.Token
  */
 class WeiboOAuthToken extends OAuthToken {
 
-  public static final String PROVIDER_NAME = "weibo"
+  public static final String PROVIDER_NAME = 'weibo'
 
   String uid
 
