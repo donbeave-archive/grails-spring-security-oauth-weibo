@@ -13,38 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package grails.plugin.springsecurity.oauth
-
-import org.scribe.model.Token
+import grails.util.Holders
 
 /**
- * OAuth authentication token for Weibo users. It's a standard {@link OAuthToken}
- * that returns the Weibo User ID as the principal.
- *
  * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
  */
-class WeiboOAuthToken extends OAuthToken {
+def appName = grails.util.Metadata.current.'app.name'
+def baseURL = Holders.config.grails.serverURL ?: "http://localhost:${System.getProperty('server.port', '8080')}/${appName}"
 
-    public static final String PROVIDER_NAME = 'weibo'
-
-    String uid
-
-    WeiboOAuthToken(Token scribeToken, uid) {
-        super(scribeToken)
-        this.uid = uid
-        this.principal = uid
+oauth {
+    providers {
+        weibo {
+            api = org.scribe.builder.api.SinaWeiboApi20
+            successUri = '/oauth/weibo/success'
+            failureUri = '/oauth/weibo/failure'
+            callback = "${baseURL}/oauth/weibo/callback"
+        }
     }
-
-    String getSocialId() {
-        return uid
-    }
-
-    String getScreenName() {
-        return uid
-    }
-
-    String getProviderName() {
-        return PROVIDER_NAME
-    }
-
 }
