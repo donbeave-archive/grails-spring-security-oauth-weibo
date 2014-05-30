@@ -49,4 +49,10 @@ Logged with weibo?
 <s2o:ifNotLoggedInWith provider="weibo">no</s2o:ifNotLoggedInWith>
 ```
 
+Copyright and license
+---------------------
+
+Copyright 2013-2014 Alexey Zhokhov under the [Apache License, Version 2.0](LICENSE). Supported by [Polusharie][polusharie].
+
+[polusharie]: http://www.polusharie.com
 [spring-security-oauth-plugin]: https://github.com/enr/grails-spring-security-oauth
