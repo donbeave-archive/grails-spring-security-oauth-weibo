@@ -40,6 +40,7 @@ Integrate [Weibo|http://www.weibo.com] to [Spring Security OAuth plugin|http://g
     def license = 'APACHE'
 
     def developers = [[name: 'Alexey Zhokhov', email: 'donbeave@gmail.com']]
+    def organization = [name: 'Polusharie', url: 'http://www.polusharie.com']
 
     def issueManagement = [system: 'GITHUB',
                            url   : 'https://github.com/donbeave/grails-spring-security-oauth-weibo/issues']
